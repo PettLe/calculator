@@ -4,31 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
     <title>Le Calculator</title>
 </head>
 <body>
     <main>
-        <div class="display">HERE COMES THE DISPLAY</div>
+        <div class="display"></div>
             <div class="buttons">                                      
-                <button class="button nums">1</button>
-                <button class="button nums">2</button>
-                <button class="button nums">3</button>
-                <button class="button operator">+</button>
-                <button class="button nums">4</button>
-                <button class="button nums">5</button>
-                <button class="button nums">6</button>
-                <button class="button operator">-</button>
-                <button class="button nums">7</button>
-                <button class="button nums">8</button>
-                <button class="button nums">9</button>
-                <button class="button operator">*</button>
+                <button class="button nums" value="1">1</button>
+                <button class="button nums" value="2">2</button>
+                <button class="button nums" value="3">3</button>
+                <button class="button operator" value="+">+</button>
+                <button class="button nums" value="4">4</button>
+                <button class="button nums" value="5">5</button>
+                <button class="button nums" value="6">6</button>
+                <button class="button operator" value="-">-</button>
+                <button class="button nums" value="7">7</button>
+                <button class="button nums" value="8">8</button>
+                <button class="button nums" value="9">9</button>
+                <button class="button operator" value="*">*</button>
                 <div class="empty"></div>
-                <button class="button nums zero">0</button>
-                <button class="button operator">=</button>
-                <button class="button operator">/</button>
+                <button class="button nums zero" value="0">0</button>
+                <button class="button result" value="=">=</button>
+                <button class="button operator" value="/">/</button>
             </div>
-            <button class="button reset">RESET</button>
+            <button class="reset">RESET</button>
     </main>
+
+    <script src="app.js"></script>
 </body>
 </html>

@@ -13,19 +13,32 @@ main {
   display: flex;
   flex-direction: column;
   width: 30vw;
+  min-height: 70vh;
   align-items: center;
-  background-color: #010433;
+  background-color: #3d1170;
   padding: 2vh;
+  border-radius: 5px;
+  gap: 2vh;
+  box-shadow: 10px 10px 8px #07020e;
 }
 
 .display {
+  display: flex;
+
+  align-items: center;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 2em;
   width: 90%;
-  height: 5vh;
+  height: 10vh;
+  min-height: 50px;
   background-color: #dadada;
   margin-bottom: 2vh;
+  border-radius: 25px;
+  padding: 1vh;
 }
 .buttons {
-  width: 100%;
+  width: 85%;
+
   display: flex;
   flex-wrap: wrap;
   gap: 0.5vh;
@@ -34,10 +47,12 @@ main {
 
 .button {
   padding: 2vh 2vh 2vh 2vh;
+  font-size: 1.5em;
 }
 
 .button.nums,
-.button.operator {
+.button.operator,
+.button.result {
   width: 20%;
 }
 /*.empty {
@@ -48,5 +63,11 @@ main {
 }*/
 .reset {
   width: 70%;
-  margin-top: 4px;
+  margin-top: 1vh;
+  font-size: 1.5em;
+  padding: 2vh;
+}
+
+.operator {
+  background-color: #ee9828;
 }

@@ -7,27 +7,68 @@ divide = (a, b) => a / b;
 
 /* Function that takes an operator, and according to it calls a matching function from before. */
 
-function operate(op, a, b) {
+function operate(op, displayValues) {
     if (op === "+") {
-        return add(a, b);
+        return add(+displayValues[0], +displayValues[1]);
     } else if (op === "-") {
-        return substract(a, b);
+        return substract(displayValues[0], displayValues[1]);
     } else if (op === "*") {
-        return multiply(a, b);
+        return multiply(displayValues[0], displayValues[1]);
+    } else if (op === "/") {
+        return divide(displayValues[0], displayValues[1]);
     } else {
-        return divide(a, b);
+        console.log("Operator ei found")
+        console.log("operator is, btw, " + op);
     }
 }
 
-console.log(operate("*", 6, 3));
 
-/* FYI This is the time to create the layout. */
+/* Using FOR loop for the buttons, we take their values and print it on to display.
+Simultaneously we add the values in to an array for later use. */
 
-/* Create FUNCTION for the calculator's display screen. When clicking the buttons (refer to the 
-RPS UI project!), it should store the "display value" in to a variable. */
+const button = document.getElementsByClassName("button");
+let display = document.querySelector(".display");
+let numStr = "";
 
-/* Actual functionality. Store the first input (into an array?) when user presses an operator, 
-also save which operator was used. Run OPERATE() when = is pressed.
+for (i = 0; i < button.length; i++) {
+    button[i].addEventListener("click", function() {
+        display.textContent += this.value;
+        numStr += this.value;
+        console.log(displayValues);
+    });
+    }
 
--We already have the code for display. When OPERATE(), just update the display with the
-solution to the operation.*/
+
+/* Actual functionality comes from here. Making the buttons commit the actual function of
+showing the result on screen. Also saving everything in array.*/
+
+let displayValues = [];
+let op = "";
+const operator = document.getElementsByClassName("operator");
+
+for (i = 0; i < operator.length; i++) {
+    operator[i].addEventListener("click", function() {
+        op = this.value;
+        displayValues.push(numStr.slice(0, -1));
+        numStr = "";
+    })
+}
+
+const result = document.querySelector(".result");
+result.addEventListener("click", function() {
+    displayValues.push(numStr.slice(0, -1));
+    display.textContent = operate(op, displayValues);
+    displayValues = [display.textContent];
+    console.log(displayValues);
+ 
+})
+
+
+const resetBtn = document.querySelector(".reset");
+resetBtn.addEventListener("click", function() {
+    display.textContent = "";
+    numStr = "";
+    displayValues = [];
+    console.log(displayValues);
+});
+
