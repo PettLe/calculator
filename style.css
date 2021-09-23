@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  align-items: center;
+  background-color: #010433;
+  padding: 2vh;
+}
+
+.display {
+  width: 90%;
+  height: 5vh;
+  background-color: #dadada;
+  margin-bottom: 2vh;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5vh;
+  justify-content: center;
+}
+
+.button {
+  padding: 2vh 2vh 2vh 2vh;
+}
+
+.button.nums,
+.button.operator {
+  width: 20%;
+}
+/*.empty {
+  width: 25%;
+}
+.zero {
+  margin-left: auto;
+}*/
+.reset {
+  width: 70%;
+  margin-top: 4px;
+}
