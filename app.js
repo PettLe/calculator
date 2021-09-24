@@ -35,21 +35,17 @@ let numStr = "";
 let displayValues = [];
 
 
-
 for (i = 0; i < nums.length; i++) {
     nums[i].addEventListener("click", function() {
         if (numStr.length < 10) {
         numStr += this.value;
         display.textContent += this.value;
-    } else {
-        const max = document.createElement("p");
+    } else if (numStr.length > 9) {
+        let max = document.createElement("p");
         display.appendChild(max);
         max.setAttribute("style", "text-align: right"); 
-        if (max.textContent === "") {
-        max.textContent = "(MAX)";}
+        max.textContent = "(MAX)";
     }
-        console.log(numStr.length);
-        console.log(displayValues);
     });
     }
 
@@ -62,15 +58,18 @@ let op = "";
 const operator = document.getElementsByClassName("operator");
 
 for (i = 0; i < operator.length; i++) {
-    operator[i].addEventListener("click", function() {
-        op = this.value;
-        if (numStr !== "") {
+    operator[i].addEventListener("click", function() {  
+       if (numStr !== "") {
         displayValues.push(numStr);}
         if (displayValues.length > 1) {
+
             calcResult();
         }
+        op = this.value;
         display.textContent += this.value;
         numStr = "";
+        console.log(op);
+        console.log(displayValues);
     })
 }
 
@@ -82,10 +81,13 @@ function calcResult() {
     numStr = "";
     display.textContent = operate(op, displayValues);
     displayValues = [display.textContent];
+    console.log("ollaan funktiossa!")
+    console.log(op);
     console.log(displayValues);
-    console.log(numStr);
  
 }
+
+// RESET BUTTON
 
 const resetBtn = document.querySelector(".reset");
 resetBtn.addEventListener("click", function() {

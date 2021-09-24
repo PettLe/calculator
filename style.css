@@ -5,26 +5,48 @@
 }
 body {
   display: flex;
+  flex-direction: column;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  padding-top: 15vh;
+  background: linear-gradient(
+    to top left,
+    rgba(52, 7, 88, 0.5),
+    rgba(255, 238, 0, 0.5)
+  );
+  gap: 8vh;
 }
 main {
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: 25vw;
   min-height: 70vh;
   align-items: center;
   background-color: #3d1170;
-  padding: 2vh;
-  border-radius: 5px;
-  gap: 2vh;
+  padding-bottom: 2vh;
+  padding-top: 1vh;
+  border-radius: 10px;
+  gap: 0.5vh;
   box-shadow: 10px 10px 8px #07020e;
+}
+
+.name {
+  width: 20vw;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  align-self: flex-start;
+  color: #dadada;
 }
 
 .display {
   display: flex;
-  box-shadow: 6px 6px 8px #07020e;
+  /*box-shadow: 6px 6px 8px #07020e;*/
+  box-shadow: inset 3px 3px 1px 1px #252525;
   align-items: center;
   font-family: "Share Tech Mono", monospace;
   font-size: 5vh;
@@ -38,7 +60,11 @@ main {
 }
 .buttons {
   width: 85%;
-
+  border: solid 2px black;
+  border-radius: 25px;
+  margin: auto;
+  background-color: #0f041b;
+  padding: 1vh 1vh 1vh 1vh;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5vh;
@@ -48,18 +74,20 @@ main {
 .button {
   padding: 2vh 2vh 2vh 2vh;
   font-size: 1.5em;
+  box-shadow: 2px 2px 1px 1px #1b0731;
 }
 
 .button.nums,
 .button.operator,
 .button.result {
   width: 20%;
+  gap: 0.5vh;
 }
 /*.empty {
   width: 25%;
 }*/
 .zero {
-  width: 40%;
+  min-width: 40.5%;
 }
 .reset {
   width: 70%;
