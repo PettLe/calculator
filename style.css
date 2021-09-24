@@ -24,10 +24,10 @@ main {
 
 .display {
   display: flex;
-
+  box-shadow: 6px 6px 8px #07020e;
   align-items: center;
   font-family: "Share Tech Mono", monospace;
-  font-size: 2em;
+  font-size: 5vh;
   width: 90%;
   height: 10vh;
   min-height: 50px;
@@ -57,10 +57,10 @@ main {
 }
 /*.empty {
   width: 25%;
-}
-.zero {
-  margin-left: auto;
 }*/
+.zero {
+  width: 40%;
+}
 .reset {
   width: 70%;
   margin-top: 1vh;
@@ -70,4 +70,8 @@ main {
 
 .operator {
   background-color: #ee9828;
+  border-radius: 5px;
+}
+.operator:hover {
+  background-color: #c57e21;
 }
