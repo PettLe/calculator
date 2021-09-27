@@ -28,6 +28,10 @@ main {
   border-radius: 10px;
   gap: 0.5vh;
   box-shadow: 10px 10px 8px #07020e;
+  border-top: 2px solid #1b0731;
+  border-left: 2px solid #1b0731;
+  border-bottom: 5px solid #1b0731;
+  border-right: 5px solid #1b0731;
 }
 
 .name {
@@ -75,6 +79,13 @@ h3 {
   padding: 2vh 2vh 2vh 2vh;
   font-size: 1.5em;
   box-shadow: 2px 2px 1px 1px #1b0731;
+  border-bottom: 2px solid #333333;
+  border-right: 2px solid #333333;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #c2c2c2;
 }
 
 .button.nums,
@@ -91,7 +102,7 @@ h3 {
 }
 .reset {
   width: 70%;
-  margin-top: 1vh;
+  margin-bottom: 1vh;
   font-size: 1.5em;
   padding: 2vh;
 }

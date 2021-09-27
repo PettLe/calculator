@@ -1,4 +1,4 @@
-/* The basic functions for each operation. May later need to take an array as a parameter? */
+/* The basic functions for each operation. */
 
 add = (a, b) => a + b;
 substract = (a, b) => a - b;
@@ -40,12 +40,12 @@ for (i = 0; i < nums.length; i++) {
         if (numStr.length < 10) {
         numStr += this.value;
         display.textContent += this.value;
-    } else if (numStr.length > 9) {
+    }/* else if (numStr.length > 9) {
         let max = document.createElement("p");
         display.appendChild(max);
-        max.setAttribute("style", "text-align: right"); 
+        max.setAttribute("style", "text-align: right");       //FIX THIS!!!!!
         max.textContent = "(MAX)";
-    }
+    }*/
     });
     }
 
@@ -62,14 +62,11 @@ for (i = 0; i < operator.length; i++) {
        if (numStr !== "") {
         displayValues.push(numStr);}
         if (displayValues.length > 1) {
-
             calcResult();
         }
         op = this.value;
         display.textContent += this.value;
         numStr = "";
-        console.log(op);
-        console.log(displayValues);
     })
 }
 
@@ -81,9 +78,6 @@ function calcResult() {
     numStr = "";
     display.textContent = operate(op, displayValues);
     displayValues = [display.textContent];
-    console.log("ollaan funktiossa!")
-    console.log(op);
-    console.log(displayValues);
  
 }
 
@@ -94,5 +88,4 @@ resetBtn.addEventListener("click", function() {
     display.textContent = "";
     numStr = "";
     displayValues = [];
-    console.log(displayValues);
 });
